@@ -1,7 +1,7 @@
 
 
 <section class="flex flex-col items-center justify-center mt-10">
-  <h2 class="text-3xl font-bold text-gray-800 mb-6">Nos Casamos en </h2>
+  
 
   <div id="countdown" class="flex gap-6 text-center font-mono text-gray-800">
     <!-- Aquí se insertarán los valores desde JS -->
@@ -10,14 +10,14 @@
 
 <script type="text/javascript">
   const countdown = document.getElementById("countdown");
-  const targetDate = new Date("2025-08-09T16:00:00").getTime();
+  const targetDate = new Date("2025-08-09T14:00:00").getTime();
 
   function updateCountdown() {
     const now = new Date().getTime();
     const distance = targetDate - now;
 
     if (distance <= 0) {
-      countdown.innerHTML = "<span class='text-red-600 text-xl font-semibold'>¡Tiempo terminado!</span>";
+      countdown.innerHTML = "<span class='text-red-600 text-xl font-semibold'>¡Ya nos Casamossss!!</span>";
       clearInterval(timer);
       return;
     }
@@ -28,22 +28,28 @@
     const seconds = Math.floor((distance % (1000 * 60)) / 1000);
 
     countdown.innerHTML = `
-      <div class="flex flex-col items-center">
-        <span class="text-4xl font-bold">${days}</span>
+    
+      <div class="h-dvh flex flex-col items-center justify-center">
+        <h2 class="text-4xl font-bold text-gray-800 mb-6">Nos Casamos en </h2>
+        <div class="flex gap-12 bg-amber-500 p-6 rounded-xl">
+        <div class="flex flex-col items-center">
+        <span class="text-6xl font-bold">${days}</span>
         <span class="text-sm text-gray-500">Días</span>
       </div>
       <div class="flex flex-col items-center">
-        <span class="text-4xl font-bold">${hours}</span>
+        <span class="text-6xl font-bold">${hours}</span>
         <span class="text-sm text-gray-500">Horas</span>
       </div>
       <div class="flex flex-col items-center">
-        <span class="text-4xl font-bold">${minutes}</span>
+        <span class="text-6xl font-bold">${minutes}</span>
         <span class="text-sm text-gray-500">Min</span>
       </div>
       <div class="flex flex-col items-center">
-        <span class="text-4xl font-bold">${seconds}</span>
+        <span class="text-6xl font-bold">${seconds}</span>
         <span class="text-sm text-gray-500">Seg</span>
       </div>
+    </div>
+        </div>
     `;
   }
 
