@@ -6,15 +6,17 @@ import Informacion from '../components/Informacion.astro';
 
 <Layout >
     
-    <div>
-        <img src="matrimonio.png" alt="ImagenAnillos" class="z-2">
+    <div class="h-1/2">
+        <img src="matrimonio.jpeg" alt="ImagenAnillos" class="z-2">
         <Contador />
         <img src="floral.svg" alt="Floral Image" class="z-1 h-1/12 -mt-72">
     </div>
-    <Informacion />
+    <div class="h-dvh flex flex-col items-center justify-center bg-white">
+        <h1 class="text-center text-4xl">
+            Diana Quesada <br>  & <br> Johan Lopez
+        </h1>
+    </div>
     
-    <h1 class="text-center  text-6xl">
-        Diana Quesada <br>  & <br> Johan Lopez
-    </h1>
+    <Informacion />
     
 </Layout>
