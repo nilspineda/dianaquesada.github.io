@@ -1,9 +1,12 @@
-
+---
+// Supports weights 200-800
+import '@fontsource-variable/karla';
+---
 
 <section class="flex flex-col items-center justify-center mt-10">
   
 
-  <div id="countdown" class="flex gap-6 text-center font-mono text-gray-800">
+  <div id="countdown" class="flex gap-6 text-center text-gray-800">
     <!-- Aquí se insertarán los valores desde JS -->
   </div>
 </section>
@@ -29,9 +32,9 @@
 
     countdown.innerHTML = `
     
-      <div class="z-9  ">
-        <h2 class="text-4xl font-bold text-gray-800 mb-6">Nos Casamos en </h2>
-        <div class="flex gap-12 bg-[#f2f2f2] p-2 rounded-xl">
+      <div class="z-9">
+        <h2 class="text-4xl font-bold text-gray-800 mb-2">Nos Casamos en </h2>
+        <div class="flex gap-12 bg-[#f2f2f2] p-4 rounded-xl">
         <div class="flex flex-col items-center">
         <span class="text-4xl font-bold">${days}</span>
         <span class="text-sm text-gray-500">Días</span>
@@ -56,3 +59,9 @@
   updateCountdown();
   const timer = setInterval(updateCountdown, 1000);
 </script>
+
+<style>
+	body {
+	font-family: 'Karla Variable', sans-serif;
+  }
+</style>
