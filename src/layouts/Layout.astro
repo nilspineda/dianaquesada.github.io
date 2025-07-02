@@ -2,7 +2,7 @@
 import "../styles/global.css";
 import Audio from '../components/Audio.astro';
 import Footer from '../components/Footer.astro';
-import '@fontsource-variable/karla';
+
 
 
 
@@ -15,14 +15,15 @@ import '@fontsource-variable/karla';
 		<meta name="viewport" content="width=device-width" />
 		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
 		<meta name="generator" content={Astro.generator} />
-		<title>Diana Quesada |Johan Lopez </title>		 
+		<title>Diana Quesada |Johan Lopez </title>		
+		<link href="https://fonts.googleapis.com/css2?family=DM+Sans&family=Meow+Script&display=swap" rel="stylesheet">
 		
 	</head>
 	<body>
 		<slot />
-		<Audio />
+		<!-- <Audio /> -->
 		<Footer />
-	
+
 	</body>
 </html>
 
@@ -37,3 +38,27 @@ import '@fontsource-variable/karla';
     });
   }
 </script>
+
+
+<style global>
+	body {
+  font-family: 'DM Sans', sans-serif;
+}
+
+h1, h2, h3, .script-font {
+  font-family: 'Meow Script', cursive;
+}
+	@font-face {
+  font-family: 'Meow Script';
+  src: url('/fonts/MeowScript-Regular.woff2') format('woff2');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'DM Sans';
+  src: url('/fonts/DMSans-Regular.woff2') format('woff2');
+  font-weight: normal;
+  font-style: normal;
+}
+</style>

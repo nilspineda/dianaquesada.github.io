@@ -1,37 +1,38 @@
 ---
 // Supports weights 200-800
-import '@fontsource-variable/karla';
-import Layout from '../layouts/Layout.astro';
-import Contador from '../components/Contador.astro';	
-import Informacion from '../components/Informacion.astro';
-import Gracias from '../components/Gracias.astro';
-import 'aos/dist/aos.css';
+
+import Layout from "../layouts/Layout.astro";
+import Contador from "../components/Contador.astro";
+import Informacion from "../components/Informacion.astro";
+import Gracias from "../components/Gracias.astro";
+import "aos/dist/aos.css";
 ---
 
-<Layout >
+<Layout>
   <div class="z-9">
-   <!-- <img src="matrimonio.jpeg" alt="ImagenAnillos" class="z-2 h-1/2"> -->
-   <div class="h-dvh flex flex-col items-center justify-center m-8">
-       <h1 class="text-center text-4xl font-bold text-wrap "data-aos="flip-left"  data-aos-duration="500">
-           Diana Quesada <br>& Johan Lopez
-           <Contador  />
-       </h1>
-   </div>
-       
-    
-    <Gracias />    
-    <Informacion  />
+    <!-- <img src="matrimonio.jpeg" alt="ImagenAnillos" class="z-2 h-1/2"> -->
+    <div class="h-dvh flex flex-col items-center">
+      <img src="mano-anillo.png" alt="Imagen Matrimonio" class="w-dvh" />
+      <div class="h-dvh flex">
+        <img src="/titulo.svg" alt="" class="w-72" />
+      </div>
+    </div>
+   
+    <div class="h-dvh bg-[#C9D9D7] flex flex-col items-center justify-center">
+      <span class="font-dm-sans text-2xl">Nos Casamos en </span> 
+      <Contador />
+    </div>
 
-    
+    <Gracias />
+    <Informacion />
+  </div>
+
+
+<h1 class="font-meow-script">Texto con Meow Script</h1><p class="font-dm-sans">Texto con DM Sans</p>
+<h1 class="font-meow-script">Texto con Meow Script</h1><p class="font-dm-sans">Texto con DM Sans</p>
+<h1 class="font-meow-script">Texto con Meow Script</h1>
+
+  <style>
+    @import "aos/dist/aos.css";
+  </style>
 </Layout>
-
-
-<style>
-  @import "aos/dist/aos.css";
-
-	body {
-	font-family: 'Karla Variable', sans-serif;
-  }
-</style>
-
-
